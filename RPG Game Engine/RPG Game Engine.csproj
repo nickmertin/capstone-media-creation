@@ -7,8 +7,8 @@
     <ProjectGuid>{4EECF634-0604-4BE2-84D7-184FE314A1C1}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>RPG_Game_Engine</RootNamespace>
-    <AssemblyName>RPG Game Engine</AssemblyName>
+    <RootNamespace>Mertin.RPG.Engine</RootNamespace>
+    <AssemblyName>Mertin.RPG.Engine</AssemblyName>
     <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -32,6 +32,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -40,7 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="DataModel\Config.cs" />
+    <Compile Include="DataModel\Fork.cs" />
+    <Compile Include="DataModel\ForkOption.cs" />
+    <Compile Include="DataModel\Event.cs" />
+    <Compile Include="DataModel\GameOver.cs" />
+    <Compile Include="DataModel\Info.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
