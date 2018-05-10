@@ -8,6 +8,6 @@ namespace Mertin.RPG.Engine.DataModel
     {
         public string Question { get; set; }
 
-        public IList<ForkOption> Options { get; } = new List<ForkOption>();
+        public List<ForkOption> Options { get; } = new List<ForkOption>();
     }
 }
