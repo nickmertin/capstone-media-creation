@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.26430.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RPG Game Engine", "RPG Game Engine\RPG Game Engine.csproj", "{4EECF634-0604-4BE2-84D7-184FE314A1C1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jonestown Adventure", "Jonestown Adventure\Jonestown Adventure.csproj", "{17D8C5AC-0B72-42EC-B8B7-3965D2196F0D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{4EECF634-0604-4BE2-84D7-184FE314A1C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4EECF634-0604-4BE2-84D7-184FE314A1C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4EECF634-0604-4BE2-84D7-184FE314A1C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17D8C5AC-0B72-42EC-B8B7-3965D2196F0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17D8C5AC-0B72-42EC-B8B7-3965D2196F0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17D8C5AC-0B72-42EC-B8B7-3965D2196F0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17D8C5AC-0B72-42EC-B8B7-3965D2196F0D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

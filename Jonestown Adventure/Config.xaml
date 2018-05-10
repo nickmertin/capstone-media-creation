@@ -1,0 +1,4 @@
+﻿<Config xmlns="http://github.com/nickmertin/rpg/model" StartEventKey="intro">
+    <Info Key="intro" NextKey="end">Background Story Here</Info>
+    <GameOver Key="end" Win="True">You win!</GameOver>
+</Config>
