@@ -4,7 +4,7 @@ using System.Windows.Media;
 
 namespace Mertin.RPG.Engine
 {
-    sealed class GameEngine
+    public sealed class GameEngine
     {
         Config config;
 

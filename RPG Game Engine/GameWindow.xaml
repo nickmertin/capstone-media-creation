@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Mertin.RPG.Engine"
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300" WindowStyle="None" WindowState="Maximized" Background="Black">
+             d:DesignHeight="300" d:DesignWidth="300" WindowStyle="None" WindowState="Maximized" Background="Black" Loaded="Window_Loaded">
     <Window.Resources>
         <Style TargetType="{x:Type TextBlock}">
             <Setter Property="TextWrapping" Value="Wrap"/>

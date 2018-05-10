@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Documents;
@@ -15,9 +16,17 @@ namespace Mertin.RPG.Engine
     /// </summary>
     public sealed partial class GameWindow : Window
     {
-        public GameWindow()
+        GameEngine engine;
+
+        public GameWindow(GameEngine engine)
         {
+            this.engine = engine;
             InitializeComponent();
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            new Task(() => engine.Run(this)).Start();
         }
 
         public void Write(string s, Color c) => Dispatcher.Invoke(() =>

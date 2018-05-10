@@ -1,13 +1,17 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections.ObjectModel;
+using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Markup;
 
 namespace Mertin.RPG.Engine.DataModel
 {
-    [ContentProperty("Events")]
+    [ContentProperty("EventsList")]
     public sealed class Config
     {
         public string StartEventKey { get; set; }
 
-        public IDictionary<string, Event> Events { get; } = new Dictionary<string, Event>();
+        public List<Event> EventsList { get; } = new List<Event>();
+
+        public IReadOnlyDictionary<string, Event> Events => new ReadOnlyDictionary<string, Event>(EventsList.ToDictionary(e => e.Key));
     }
 }
