@@ -51,6 +51,7 @@
     <Compile Include="DataModel\Event.cs" />
     <Compile Include="DataModel\GameOver.cs" />
     <Compile Include="DataModel\Info.cs" />
+    <Compile Include="DataModel\Prompt.cs" />
     <Compile Include="GameEngine.cs" />
     <Compile Include="GameWindow.xaml.cs">
       <DependentUpon>GameWindow.xaml</DependentUpon>
