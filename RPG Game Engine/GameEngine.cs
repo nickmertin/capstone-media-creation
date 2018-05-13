@@ -28,7 +28,7 @@ namespace Mertin.RPG.Engine
                         current = config.Events[i.NextKey];
                         break;
                     case Fork f:
-                        window.WriteLine(f.Question + "\n", Colors.Red);
+                        window.WriteLine(f.Question + "\n", Colors.LightGreen);
                         for (int i = 0; i < f.Options.Count; ++i)
                             window.WriteLine($"  - [{i}]: {f.Options[i].Text}", Colors.Yellow);
                         window.WriteLine("", new Color());
