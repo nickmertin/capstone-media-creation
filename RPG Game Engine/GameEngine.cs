@@ -19,28 +19,27 @@ namespace Mertin.RPG.Engine
             while (true)
             {
                 window.WriteLine(current.DisplayText, Colors.Yellow);
-                if (current is Info)
+                switch (current)
                 {
-                    window.Write("Press any key to continue...", Colors.Red);
-                    window.WaitForKey(k => true);
-                    window.WriteLine("", new Color());
-                    current = config.Events[(current as Info).NextKey];
-                }
-                else if (current is Fork)
-                {
-                    var c = current as Fork;
-                    window.WriteLine(c.Question + "\n", Colors.Red);
-                    for (int i = 0; i < c.Options.Count; ++i)
-                        window.WriteLine($"  - [{i}]: {c.Options[i].Text}", Colors.Yellow);
-                    window.WriteLine("", new Color());
-                    current = config.Events[c.Options[window.Get("What would you like to do? ", i => i < c.Options.Count && i >= 0, int.Parse)].NextKey];
-                }
-                else if (current is GameOver)
-                {
-                    window.Write("Press any key to continue...", Colors.Red);
-                    window.WaitForKey(k => true);
-                    Application.Current.Dispatcher.Invoke(Application.Current.Shutdown);
-                    return;
+                    case Info i:
+                        window.Write("Press any key to continue...", Colors.Red);
+                        window.WaitForKey(k => true);
+                        window.WriteLine("", new Color());
+                        current = config.Events[i.NextKey];
+                        break;
+                    case Fork f:
+                        window.WriteLine(f.Question + "\n", Colors.Red);
+                        for (int i = 0; i < f.Options.Count; ++i)
+                            window.WriteLine($"  - [{i}]: {f.Options[i].Text}", Colors.Yellow);
+                        window.WriteLine("", new Color());
+                        current = config.Events[f.Options[window.Get("What would you like to do? ", i => i < f.Options.Count && i >= 0, int.Parse)].NextKey];
+                        break;
+                    case GameOver g:
+                        window.WriteLine(g.Win ? "You won!" : "You lost!", Colors.Aqua);
+                        window.Write("Press any key to exit...", Colors.Red);
+                        window.WaitForKey(k => true);
+                        Application.Current.Dispatcher.Invoke(Application.Current.Shutdown);
+                        return;
                 }
             }
         }
