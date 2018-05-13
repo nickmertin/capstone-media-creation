@@ -1,5 +1,11 @@
 ﻿<Config xmlns="http://github.com/nickmertin/rpg/model" StartEventKey="name">
-    <Prompt Key="name" PromptText="What is your name?" StoreKey="name" NextKey="story">Welcome to Jonestown Adventure.</Prompt>
+    <Prompt Key="name" PromptText="What is your name?" StoreKey="name" NextKey="tutorial">Welcome to Jonestown Adventure.</Prompt>
+    <Fork Key="tutorial" DisplayText="Hi {{name}}! In Jonestown Adventure, you will be presented with various pieces of information and asked to make decisions accordingly. Questions look like this, and you will need to enter the number for the response that you chose, then press &lt;enter&gt;. For example:" Question="What's your favourite colour?">
+        <ForkOption NextKey="continue">Red</ForkOption>
+        <ForkOption NextKey="continue">Green</ForkOption>
+        <ForkOption NextKey="continue">Blue</ForkOption>
+    </Fork>
+    <Info Key="continue" NextKey="story">Good job! The game will now begin.</Info>
     <Info Key="story" NextKey="guyana-choice">Your name is {{name}}. You are a recent college graduate living in Redwood Valley, California, at the Peoples Temple. You joined the Temple two years ago when you found commonality with some of their political messages. You generally have enjoyed the experience, but you're starting to think about your future, and recognize that the Temple may prevent you from achieving some of your goals, such as starting a family.</Info>
     <Fork Key="guyana-choice" DisplayText="Rev. Jim Jones offers you a place on the next group heading down to the Temple outpost in the Promised Land, Guyana." Question="What do you do?">
         <ForkOption NextKey="guyana1">Accept the offer</ForkOption>
