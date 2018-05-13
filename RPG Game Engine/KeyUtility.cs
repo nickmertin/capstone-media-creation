@@ -32,7 +32,7 @@ namespace Mertin.RPG.Engine
 
         public static char GetCharFromKey(Key key)
         {
-            char ch = ' ';
+            char ch = '\0';
 
             int virtualKey = KeyInterop.VirtualKeyFromKey(key);
             byte[] keyboardState = new byte[256];

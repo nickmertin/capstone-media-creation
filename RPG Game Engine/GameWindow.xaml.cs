@@ -79,7 +79,9 @@ namespace Mertin.RPG.Engine
                             ewh.Set();
                             break;
                         default:
-                            t.Text = t.Text.Insert(offset++, KeyUtility.GetCharFromKey(e.Key).ToString());
+                            char ch = KeyUtility.GetCharFromKey(e.Key);
+                            if (ch != '\0')
+                                t.Text = t.Text.Insert(offset++, ch.ToString());
                             break;
                     }
                 };
