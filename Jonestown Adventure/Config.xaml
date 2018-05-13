@@ -1,4 +1,18 @@
 ﻿<Config xmlns="http://github.com/nickmertin/rpg/model" StartEventKey="intro">
-    <Info Key="intro" NextKey="end">Background Story Here</Info>
-    <GameOver Key="end" Win="True">You win!</GameOver>
+    <Info Key="intro" NextKey="guyana-choice">Your name is _____. You are a recent college graduate living in Redwood Valley, California, at the Peoples Temple. You joined the Temple two years ago when you found commonality with some of their political messages. You generally have enjoyed the experience, but you're starting to think about your future, and recognize that the Temple may prevent you from achieving some of your goals, such as starting a family.</Info>
+    <Fork Key="guyana-choice" DisplayText="Rev. Jim Jones offers you a place on the next group heading down to the Temple outpost in the Promised Land, Guyana. What do you do?">
+        <ForkOption NextKey="guyana1">Accept the offer</ForkOption>
+        <ForkOption NextKey="stay1">Ask to stay in California</ForkOption>
+    </Fork>
+    <Info Key="stay1" NextKey="end">You inform Jones that you think you would be more valuable to the Temple if you stayed here in Redwood Valley.</Info>
+    <Info Key="guyana1" NextKey="capital1">You accept the offer, and leave two days later on a flight to Georgetown, Guyana.</Info>
+    <Info Key="capital1" NextKey="boat">You stay in Georgetown for a few nights, at the Temple's building there. The warm tropical temperatures are a nice contrast from the relatively colder climate of Redwood Valley.</Info>
+    <Info Key="boat" NextKey="welcome">The boat ride to Port Kaituma was filled with plenty of turbulence and rough seas. When you finally arrive, you and the others on the boat are welcomed by a small group with a pickup truck, who will bring you to Jonestown. Despite your previous concerns, you feel some excitement about your new home.</Info>
+    <Info Key="welcome" NextKey="escape1">Upon arriving in Jonestown, passing under the sign reading "Peoples Temple Agricultural Project", you are faced with the reality that it might not be the paradise that you were so proudly promised. The pioneers who arrived before you all looked tired and unhappy, and your concerns begin to grow again when most of your belongings are confiscated by the welcoming committee, and you are assigned to a top bunk in a small cabin with 9 others.</Info>
+    <Fork Key="escape1" DisplayText="Lying on your bunk, you think about your new reality and your thoughts begin to wander to the possibility of escape. Might it even be possible to escape tonight?">
+        <ForkOption NextKey="jungle">Make a run for the jungle to try to escape the settlement and find passage back to the United States</ForkOption>
+        <ForkOption NextKey="stay2">Stay in Jonestown and try to find another way out of the situation</ForkOption>
+    </Fork>
+    <GameOver Key="jungle" Win="False">You sneak out of your cabin, and start to find your way to the edge of the settlement. Though you are able to leave undetected, you are disoriented in the never-endign wilderness, and quickly find yourself hungry and dehydrated. When your absence is noticed in the morning, a search party of Temple security guards is sent out to find you. Having been unable to venture far from the edge of camp, you are quickly discovered by the guards, and forcibly confined in the settlement. You're told that you will never be allowed to leave the infirmary unguarded, and it will be impossible for you to try to defect again.</GameOver>
+    <GameOver Key="end" Win="True">The end</GameOver>
 </Config>
