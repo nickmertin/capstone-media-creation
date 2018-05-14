@@ -1,5 +1,5 @@
 ﻿<Config xmlns="http://github.com/nickmertin/rpg/model" StartEventKey="name">
-    <Prompt Key="name" PromptText="What is your name?" StoreKey="name" NextKey="tutorial">Welcome to Jonestown Adventure.</Prompt>
+    <Prompt Key="name" PromptText="What is your name?" StoreKey="name" Regex=".*[^\s]+.*"  NextKey="tutorial">Welcome to Jonestown Adventure.</Prompt>
     <Fork Key="tutorial" DisplayText="Hi {{name}}! In Jonestown Adventure, you will be presented with various pieces of information and asked to make decisions accordingly. Questions look like this, and you will need to enter the number for the response that you chose, then press &lt;enter&gt;. For example:" Question="What's your favourite colour?">
         <ForkOption NextKey="continue">Red</ForkOption>
         <ForkOption NextKey="continue">Green</ForkOption>
